@@ -87,15 +87,15 @@
         ctx.fillRect (0, 0, c.width, c.height);
         ctx.fillStyle = "#0F0";
         ctx.font = font_size + "px serif";
-        for ( let i = 0; i < drops.length; i++ ) {
-            let text = matrix[ Math.floor( Math.random() * matrix.length ) ];
+        for (let i = 0; i < drops.length; i++) {
+            let text = matrix[Math.floor(Math.random() * matrix.length)];
             ctx.fillText(text, i * font_size, drops[i] * font_size);
-            if ( drops[i] * font_size > c.height && Math.random() > 0.975 )
+            if (drops[i] * font_size > c.height && Math.random() > 0.975)
                 drops[i] = 0;
             drops[i]++;
         }
     }
-    setInterval ( draw, 100 );
+    setInterval (draw, 100);
     </script>
     </body>
 </html>
